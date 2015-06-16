@@ -1,0 +1,12 @@
+<div class="search-results">
+	<p>Search Results for <strong>{{search_term}}</strong></p>
+	<div class="row">
+
+	{{#each result in model}}
+		<div class="col-sm-3">
+			<a href="/product/{{result.id}}"><img src="http://placehold.it/200x100" alt="" class="img-responsive" />
+			<p>{{result.title}}</p></a>
+		</div>
+	{{/each}}
+	</div>
+</div>	

@@ -29,18 +29,19 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
-    ENV.locationType = 'none';
+    ENV.baseURL = '/csg/test-app/dist/';
+    ENV.locationType = 'hash';
 
     // keep test console output quieter
-    ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
+    //ENV.APP.LOG_ACTIVE_GENERATION = false;
+    //ENV.APP.LOG_VIEW_LOOKUPS = false;
 
-    ENV.APP.rootElement = '#ember-testing';
+    //ENV.APP.rootElement = '#ember-testing';
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/Ember/';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
